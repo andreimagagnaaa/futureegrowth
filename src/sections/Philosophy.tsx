@@ -22,7 +22,7 @@ const philosophies = [
 
 export const Philosophy = () => {
   return (
-    <section className="py-32 bg-gradient-radial-center relative">
+    <section className="py-32 bg-gradient-radial-center relative overflow-hidden">
       <div className="absolute inset-0 bg-dot-pattern opacity-30" />
       <div className="container mx-auto relative z-10">
         <div className="mb-20 text-center">

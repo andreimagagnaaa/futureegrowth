@@ -3,7 +3,7 @@ import { Quote } from 'lucide-react';
 
 export const Founder = () => {
   return (
-    <section id="about" className="py-32 border-t border-white/5 bg-black relative bg-grid-pattern">
+    <section id="about" className="py-32 border-t border-white/5 bg-black relative bg-grid-pattern overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-primary/[0.03] to-transparent" />
       <div className="container mx-auto relative z-10">
         <div className="flex flex-col md:flex-row items-center gap-12 md:gap-20 max-w-6xl mx-auto">

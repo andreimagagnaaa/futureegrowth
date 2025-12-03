@@ -3,7 +3,7 @@ import { MessageSquare, BarChart2, Zap } from 'lucide-react';
 
 export const Implementation = () => {
   return (
-    <section className="py-32 bg-gradient-dark-subtle border-y border-white/5">
+    <section className="py-32 bg-gradient-dark-subtle border-y border-white/5 overflow-hidden">
       <div className="container mx-auto">
         <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
           

@@ -47,7 +47,7 @@ const LandingPage = () => (
 function App() {
   return (
     <Router>
-      <main className="relative min-h-screen bg-background text-foreground selection:bg-primary/30 selection:text-primary">
+      <main className="relative min-h-screen bg-background text-foreground selection:bg-primary/30 selection:text-primary overflow-x-hidden">
         <div className="noise-overlay" />
         <Routes>
           <Route path="/" element={<LandingPage />} />

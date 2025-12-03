@@ -14,7 +14,7 @@ export const Navbar = () => {
 
   return (
     <nav 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 w-full max-w-[100vw] overflow-hidden transition-all duration-500 ${
         scrolled 
           ? 'bg-background/80 backdrop-blur-md border-b border-white/5 py-4' 
           : 'bg-transparent py-6'

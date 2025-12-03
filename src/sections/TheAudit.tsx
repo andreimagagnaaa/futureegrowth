@@ -3,7 +3,7 @@ import { Search, Target, FileCheck } from 'lucide-react';
 
 export const TheAudit = () => {
   return (
-    <section className="py-32 bg-gradient-radial-center relative border-t border-white/5">
+    <section className="py-32 bg-gradient-radial-center relative border-t border-white/5 overflow-hidden">
       <div className="absolute inset-0 bg-dot-pattern opacity-20" />
       <div className="container mx-auto relative z-10">
         <div className="grid gap-16 lg:grid-cols-2 lg:items-center">

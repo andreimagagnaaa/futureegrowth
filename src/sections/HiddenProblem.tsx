@@ -3,7 +3,7 @@ import { AlertTriangle, ArrowRight } from 'lucide-react';
 
 export const HiddenProblem = () => {
   return (
-    <section className="py-32 bg-grid-pattern border-y border-white/5 relative">
+    <section className="py-32 bg-grid-pattern border-y border-white/5 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
       <div className="container mx-auto relative z-10">
         <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
