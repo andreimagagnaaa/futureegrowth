@@ -10,7 +10,7 @@ export const Footer = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col items-center justify-between gap-8 border-t border-white/5 pt-12 text-xs tracking-widest uppercase text-gray-600 md:flex-row">
-          <div className="flex gap-8">
+          <div className="flex flex-col md:flex-row gap-8 text-center md:text-left">
             <a href="#" className="hover:text-primary transition-colors relative group">
               Futuree Solutions
               <span className="absolute -bottom-1 left-0 w-0 h-px bg-primary transition-all duration-300 group-hover:w-full" />

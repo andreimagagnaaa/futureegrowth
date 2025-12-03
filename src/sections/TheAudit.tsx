@@ -64,17 +64,17 @@ export const TheAudit = () => {
             viewport={{ once: true }}
             className="relative flex items-center justify-center"
           >
-            <div className="relative w-full max-w-md aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 bg-gray-900/50 backdrop-blur-sm">
+            <div className="relative w-full max-w-md aspect-auto md:aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 bg-gray-900/50 backdrop-blur-sm">
                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent" />
                
                {/* Calendar UI Mockup */}
-               <div className="p-8 h-full flex flex-col relative z-10">
+               <div className="p-6 md:p-8 h-full flex flex-col relative z-10">
                  <div className="flex items-center justify-between mb-8">
                    <div className="text-sm font-bold text-gray-500 uppercase tracking-widest">Agenda Confirmada</div>
                    <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
                  </div>
                  
-                 <div className="flex-1 flex flex-col justify-center items-center text-center space-y-6">
+                 <div className="flex-1 flex flex-col justify-center items-center text-center space-y-6 py-8 md:py-0">
                    <div className="h-20 w-20 rounded-full bg-white/5 border border-white/10 flex items-center justify-center">
                      <span className="text-2xl">📅</span>
                    </div>
@@ -98,7 +98,7 @@ export const TheAudit = () => {
                      href="https://calendar.app.google/VLdRkuBcvDts3jds7" 
                      target="_blank" 
                      rel="noopener noreferrer"
-                     className="w-full bg-primary text-black font-medium py-3 rounded hover:bg-primary/90 transition-colors mt-4"
+                     className="w-full bg-primary text-black font-medium py-4 md:py-3 rounded hover:bg-primary/90 transition-colors mt-4 text-lg md:text-base shadow-lg shadow-primary/20"
                    >
                      Agendar Agora
                    </a>

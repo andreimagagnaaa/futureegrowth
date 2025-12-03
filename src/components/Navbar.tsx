@@ -38,7 +38,7 @@ export const Navbar = () => {
         </div>
 
         {/* CTA */}
-        <div className="flex items-center gap-4">
+        <div className="hidden md:flex items-center gap-4">
           <Button 
             size="sm" 
             variant="outline" 
