@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Search, Target, FileCheck } from 'lucide-react';
+import { Search, Target, FileCheck, Calendar } from 'lucide-react';
 
 export const TheAudit = () => {
   return (
@@ -76,7 +76,7 @@ export const TheAudit = () => {
                  
                  <div className="flex-1 flex flex-col justify-center items-center text-center space-y-6 py-8 md:py-0">
                    <div className="h-20 w-20 rounded-full bg-white/5 border border-white/10 flex items-center justify-center">
-                     <span className="text-2xl">📅</span>
+                     <Calendar className="h-8 w-8 text-primary" />
                    </div>
                    <div>
                      <h3 className="text-2xl font-serif text-white mb-2">Sessão Estratégica</h3>

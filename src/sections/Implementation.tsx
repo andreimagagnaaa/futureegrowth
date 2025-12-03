@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { MessageSquare, BarChart2, Zap } from 'lucide-react';
+import { MessageSquare, BarChart2, Zap, User } from 'lucide-react';
 
 export const Implementation = () => {
   return (
@@ -76,21 +76,25 @@ export const Implementation = () => {
               
               <div className="space-y-4">
                 <div className="flex gap-3">
-                  <div className="h-8 w-8 rounded bg-primary/20 flex items-center justify-center text-xs text-primary font-bold ring-1 ring-primary/30">FG</div>
+                  <div className="h-8 w-8 rounded bg-primary/20 flex items-center justify-center text-xs text-primary font-bold ring-1 ring-primary/30">
+                    <Zap className="h-4 w-4" />
+                  </div>
                   <div className="space-y-1">
                     <div className="flex items-baseline gap-2">
                       <span className="text-sm font-bold text-white">Strategist</span>
                       <span className="text-[10px] text-gray-600">10:42 AM</span>
                     </div>
                     <div className="rounded-lg rounded-tl-none bg-white/5 p-3 text-sm text-gray-300 border border-white/5">
-                      Atualização diária: O ROAS da campanha “Scale_V2” chegou a <strong className="text-green-400">4,2×</strong> hoje. 🚀 <br/>
+                      Atualização diária: O ROAS da campanha “Scale_V2” chegou a <strong className="text-green-400">4,2×</strong> hoje. <br/>
                       O CPL reduziu em 15%.
                     </div>
                   </div>
                 </div>
 
                 <div className="flex gap-3 flex-row-reverse">
-                  <div className="h-8 w-8 rounded bg-gray-700 flex items-center justify-center text-xs text-white font-bold ring-1 ring-white/20">VC</div>
+                  <div className="h-8 w-8 rounded bg-gray-700 flex items-center justify-center text-xs text-white font-bold ring-1 ring-white/20">
+                    <User className="h-4 w-4" />
+                  </div>
                   <div className="space-y-1 text-right">
                     <div className="flex items-baseline gap-2 justify-end">
                       <span className="text-[10px] text-gray-600">10:45 AM</span>
@@ -103,7 +107,9 @@ export const Implementation = () => {
                 </div>
                  
                  <div className="flex gap-3">
-                  <div className="h-8 w-8 rounded bg-primary/20 flex items-center justify-center text-xs text-primary font-bold ring-1 ring-primary/30">FG</div>
+                  <div className="h-8 w-8 rounded bg-primary/20 flex items-center justify-center text-xs text-primary font-bold ring-1 ring-primary/30">
+                    <Zap className="h-4 w-4" />
+                  </div>
                   <div className="space-y-1">
                     <div className="flex items-baseline gap-2">
                       <span className="text-sm font-bold text-white">Strategist</span>
