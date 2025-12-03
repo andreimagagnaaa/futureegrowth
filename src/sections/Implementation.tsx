@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { MessageSquare, BarChart2, Zap, Clock } from 'lucide-react';
+import { MessageSquare, BarChart2, Zap } from 'lucide-react';
 
 export const Implementation = () => {
   return (

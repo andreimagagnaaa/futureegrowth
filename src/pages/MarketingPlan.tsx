@@ -1,7 +1,6 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '../components/Button';
-import { ArrowLeft, CheckCircle2, FileText, Target, BarChart2, Map, ArrowRight, XCircle, AlertTriangle, BrainCircuit, Compass } from 'lucide-react';
+import { ArrowLeft, CheckCircle2, FileText, Target, BarChart2, Map, ArrowRight, XCircle, AlertTriangle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Footer } from '../sections/Footer';
 import { Accordion, AccordionItem } from '../components/Accordion';
