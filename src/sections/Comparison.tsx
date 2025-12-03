@@ -7,7 +7,7 @@ export const Comparison = () => {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/[0.03] via-transparent to-transparent" />
       
       {/* Background VS Effect */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[20rem] font-bold text-white/[0.01] pointer-events-none select-none font-serif">VS</div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[10rem] md:text-[20rem] font-bold text-white/[0.01] pointer-events-none select-none font-serif">VS</div>
 
       <div className="container mx-auto relative z-10">
         <div className="mb-20 text-center">

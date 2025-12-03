@@ -33,7 +33,7 @@ export const FAQ = () => {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-900 via-black to-black" />
       
       {/* Decorative Question Mark */}
-      <div className="absolute -top-20 -right-20 text-[30rem] font-serif font-bold text-white/[0.02] pointer-events-none select-none rotate-12">?</div>
+      <div className="absolute -top-20 -right-20 text-[15rem] md:text-[30rem] font-serif font-bold text-white/[0.02] pointer-events-none select-none rotate-12">?</div>
 
       <div className="container mx-auto relative z-10">
         <div className="grid lg:grid-cols-12 gap-12">
