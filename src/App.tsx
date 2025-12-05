@@ -19,6 +19,14 @@ import { FAQ } from './sections/FAQ';
 import { CTA } from './sections/CTA';
 import { Footer } from './sections/Footer';
 import { MarketingPlan } from './pages/MarketingPlan';
+import Business from './pages/Business';
+import { InternalLayout } from './layouts/InternalLayout';
+import { ProjectDetails } from './pages/ProjectDetails';
+import { AllTasks } from './pages/AllTasks';
+import { Clients } from './pages/Clients';
+import { ClientDetails } from './pages/ClientDetails';
+import { Login } from './pages/Login';
+import { RequireAuth } from './components/RequireAuth';
 import { Analytics } from "@vercel/analytics/react"
 
 const LandingPage = () => (
@@ -53,6 +61,20 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/marketing-plan" element={<MarketingPlan />} />
+          <Route path="/login" element={<Login />} />
+          
+          {/* Internal System Routes */}
+          <Route path="/business" element={
+            <RequireAuth>
+              <InternalLayout />
+            </RequireAuth>
+          }>
+            <Route index element={<Business />} />
+            <Route path="tasks" element={<AllTasks />} />
+            <Route path="clients" element={<Clients />} />
+            <Route path="clients/:id" element={<ClientDetails />} />
+            <Route path=":slug" element={<ProjectDetails />} />
+          </Route>
         </Routes>
         <Analytics />
       </main>
