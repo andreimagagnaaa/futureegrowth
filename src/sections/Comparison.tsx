@@ -1,7 +1,11 @@
 import { motion } from 'framer-motion';
 import { X, Check, ArrowRight } from 'lucide-react';
+import { useState } from 'react';
+import { ContactModal } from '../components/ContactModal';
 
 export const Comparison = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section className="py-32 bg-gradient-dark-subtle border-y border-white/5 relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/[0.03] via-transparent to-transparent" />
@@ -81,7 +85,10 @@ export const Comparison = () => {
             </ul>
             
             <div className="mt-10 pt-8 border-t border-white/10 text-center relative z-10">
-              <button className="text-primary hover:text-white transition-colors text-sm font-bold tracking-widest uppercase flex items-center justify-center gap-2 mx-auto group">
+              <button 
+                onClick={() => setIsModalOpen(true)}
+                className="text-primary hover:text-white transition-colors text-sm font-bold tracking-widest uppercase flex items-center justify-center gap-2 mx-auto group"
+              >
                 Quero migrar para o modelo Futuree
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </button>
@@ -89,6 +96,7 @@ export const Comparison = () => {
           </motion.div>
         </div>
       </div>
+      <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 };

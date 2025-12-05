@@ -1,7 +1,11 @@
 import { motion } from 'framer-motion';
 import { Search, Target, FileCheck, Calendar } from 'lucide-react';
+import { useState } from 'react';
+import { ContactModal } from '../components/ContactModal';
 
 export const TheAudit = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section className="py-32 bg-gradient-radial-center relative border-t border-white/5 overflow-hidden">
       <div className="absolute inset-0 bg-dot-pattern opacity-20" />
@@ -94,14 +98,12 @@ export const TheAudit = () => {
                      </div>
                    </div>
 
-                   <a 
-                     href="https://calendar.app.google/VLdRkuBcvDts3jds7" 
-                     target="_blank" 
-                     rel="noopener noreferrer"
+                   <button 
+                     onClick={() => setIsModalOpen(true)}
                      className="w-full bg-primary text-black font-medium py-4 md:py-3 rounded hover:bg-primary/90 transition-colors mt-4 text-lg md:text-base shadow-lg shadow-primary/20"
                    >
                      Agendar Agora
-                   </a>
+                   </button>
                  </div>
                </div>
             </div>
@@ -109,6 +111,7 @@ export const TheAudit = () => {
 
         </div>
       </div>
+      <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 };

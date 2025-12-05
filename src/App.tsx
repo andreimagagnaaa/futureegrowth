@@ -19,6 +19,7 @@ import { FAQ } from './sections/FAQ';
 import { CTA } from './sections/CTA';
 import { Footer } from './sections/Footer';
 import { MarketingPlan } from './pages/MarketingPlan';
+import { Analytics } from "@vercel/analytics/react"
 
 const LandingPage = () => (
   <>
@@ -53,6 +54,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/marketing-plan" element={<MarketingPlan />} />
         </Routes>
+        <Analytics />
       </main>
     </Router>
   );

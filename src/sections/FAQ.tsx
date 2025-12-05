@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus, Minus, HelpCircle, ArrowRight } from 'lucide-react';
 import { useState } from 'react';
+import { ContactModal } from '../components/ContactModal';
 
 const faqs = [
   {
@@ -27,6 +28,7 @@ const faqs = [
 
 export const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <section id="faq" className="py-32 bg-black relative border-t border-white/5 overflow-hidden">
@@ -51,7 +53,10 @@ export const FAQ = () => {
               <p className="text-lg text-gray-400 font-light leading-relaxed mb-8">
                 Entenda como nossa metodologia se adapta ao seu negócio. Se sua dúvida não estiver aqui, fale conosco.
               </p>
-              <button className="text-primary text-sm font-bold uppercase tracking-widest hover:text-white transition-colors flex items-center gap-2 group">
+              <button 
+                onClick={() => setIsModalOpen(true)}
+                className="text-primary text-sm font-bold uppercase tracking-widest hover:text-white transition-colors flex items-center gap-2 group"
+              >
                 Falar com um consultor <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </button>
             </div>
@@ -113,6 +118,7 @@ export const FAQ = () => {
 
         </div>
       </div>
+      <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 };
