@@ -1,4 +1,4 @@
-import { AlertTriangle, Clock, Calendar } from 'lucide-react';
+import { AlertTriangle, Clock } from 'lucide-react';
 
 export const formatDate = (dateStr: string) => {
   if (!dateStr) return '';

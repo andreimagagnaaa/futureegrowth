@@ -1,14 +1,13 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { KanbanBoard } from '../components/KanbanBoard';
-import { Users, Layout, Plus, Search, MoreVertical, Edit2, ArrowRight } from 'lucide-react';
+import { Users, Layout, Plus, Search, Edit2, ArrowRight } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 import { motion } from 'framer-motion';
 import { ClientModal, type Client } from '../components/ClientModal';
 
 const ClientsList = ({ projectSlug }: { projectSlug: string }) => {
   const [clients, setClients] = useState<Client[]>([]);
-  const [loading, setLoading] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedClient, setSelectedClient] = useState<Client | undefined>(undefined);
   const [searchQuery, setSearchQuery] = useState('');
@@ -29,8 +28,6 @@ const ClientsList = ({ projectSlug }: { projectSlug: string }) => {
       setClients(data || []);
     } catch (error) {
       console.error('Error fetching clients:', error);
-    } finally {
-      setLoading(false);
     }
   };
 

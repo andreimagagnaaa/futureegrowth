@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { supabase } from '../lib/supabase';
-import { Plus, Calendar, CheckCircle2, Circle, Clock, Trash2, AlertCircle } from 'lucide-react';
+import { Plus, Calendar, CheckCircle2, Circle, Clock, Trash2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Input } from './Input';
 import { Button } from './Button';
