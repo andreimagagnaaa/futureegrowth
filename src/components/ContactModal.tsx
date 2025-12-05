@@ -3,6 +3,7 @@ import { Modal } from './Modal';
 import { Input } from './Input';
 import { Button } from './Button';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { supabase } from '../lib/supabase';
 
 interface ContactModalProps {
   isOpen: boolean;
@@ -12,22 +13,52 @@ interface ContactModalProps {
 export const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    company: '',
+    email: '',
+    phone: ''
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    setIsSubmitting(false);
-    setIsSuccess(true);
-    
-    // Reset after showing success message
-    setTimeout(() => {
-      setIsSuccess(false);
-      onClose();
-    }, 3000);
+    try {
+      const { error } = await supabase
+        .from('leads')
+        .insert([
+          { 
+            name: formData.name,
+            company: formData.company,
+            email: formData.email,
+            phone: formData.phone
+          }
+        ]);
+
+      if (error) throw error;
+
+      setIsSuccess(true);
+      setFormData({ name: '', company: '', email: '', phone: '' });
+      
+      // Reset after showing success message
+      setTimeout(() => {
+        setIsSuccess(false);
+        onClose();
+      }, 3000);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Ocorreu um erro ao enviar o formulário. Por favor, tente novamente.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -47,12 +78,18 @@ export const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
           <div className="space-y-4">
             <Input 
               label="Nome Completo" 
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
               placeholder="Seu nome" 
               required 
               className="bg-white/[0.03] border-white/5 focus:border-primary/50 focus:bg-white/[0.05]"
             />
             <Input 
               label="Empresa" 
+              name="company"
+              value={formData.company}
+              onChange={handleChange}
               placeholder="Nome da sua empresa" 
               required 
               className="bg-white/[0.03] border-white/5 focus:border-primary/50 focus:bg-white/[0.05]"
@@ -60,6 +97,9 @@ export const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
             <Input 
               label="E-mail Corporativo" 
               type="email" 
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
               placeholder="seu@email.com" 
               required 
               className="bg-white/[0.03] border-white/5 focus:border-primary/50 focus:bg-white/[0.05]"
@@ -67,6 +107,9 @@ export const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
             <Input 
               label="Telefone / WhatsApp" 
               type="tel" 
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
               placeholder="(11) 99999-9999" 
               required 
               className="bg-white/[0.03] border-white/5 focus:border-primary/50 focus:bg-white/[0.05]"
