@@ -26,6 +26,7 @@ import { AllTasks } from './pages/AllTasks';
 import { Clients } from './pages/Clients';
 import { ClientDetails } from './pages/ClientDetails';
 import { Login } from './pages/Login';
+import { School } from './pages/School';
 import { RequireAuth } from './components/RequireAuth';
 import { Analytics } from "@vercel/analytics/react"
 
@@ -61,6 +62,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/marketing-plan" element={<MarketingPlan />} />
+          <Route path="/school" element={<School />} />
           <Route path="/login" element={<Login />} />
           
           {/* Internal System Routes */}
