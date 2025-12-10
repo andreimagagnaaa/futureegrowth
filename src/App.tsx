@@ -28,6 +28,16 @@ import { ClientDetails } from './pages/ClientDetails';
 import { Login } from './pages/Login';
 import { School } from './pages/School';
 import { SchoolDiverge } from './pages/SchoolDiverge';
+import { SchoolDemandB2B } from './pages/SchoolDemandB2B';
+import { SchoolOne } from './pages/SchoolOne';
+import { SchoolAutenticidade } from './pages/SchoolAutenticidade';
+import { SchoolAI } from './pages/SchoolAI';
+import { SchoolCommodity } from './pages/SchoolCommodity';
+import { SchoolOneMillion } from './pages/SchoolOneMillion';
+import { SchoolLever } from './pages/SchoolLever';
+import { SchoolPLG } from './pages/SchoolPLG';
+import { SchoolVibe } from './pages/SchoolVibe';
+import { SchoolMicroSaaS } from './pages/SchoolMicroSaaS';
 import { RequireAuth } from './components/RequireAuth';
 import { Analytics } from "@vercel/analytics/react"
 
@@ -65,9 +75,17 @@ function App() {
           <Route path="/marketing-plan" element={<MarketingPlan />} />
           <Route path="/school-mkt-2026" element={<School />} />
           <Route path="/school-mkt-diverge" element={<SchoolDiverge />} />
-          <Route path="/login" element={<Login />} />
-          
-          {/* Internal System Routes */}
+          <Route path="/school-mkt-demand-b2b" element={<SchoolDemandB2B />} />
+          <Route path="/school-mkt-one" element={<SchoolOne />} />
+          <Route path="/school-mkt-autenticidade" element={<SchoolAutenticidade />} />
+          <Route path="/school-mkt-ai-generativa" element={<SchoolAI />} />
+          <Route path="/school-mkt-commodity" element={<SchoolCommodity />} />
+          <Route path="/school-mkt-1-1m" element={<SchoolOneMillion />} />
+          <Route path="/school-mkt-alavanca" element={<SchoolLever />} />
+        <Route path="/school-mkt-PLG" element={<SchoolPLG />} />
+        <Route path="/school-mkt-Vibe" element={<SchoolVibe />} />
+        <Route path="/school-mkt-MicroSaaS" element={<SchoolMicroSaaS />} />
+        <Route path="/login" element={<Login />} />          {/* Internal System Routes */}
           <Route path="/business" element={
             <RequireAuth>
               <InternalLayout />
