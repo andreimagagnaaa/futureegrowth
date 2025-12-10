@@ -7,7 +7,7 @@ export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const location = useLocation();
-  const isSimple = location.pathname === '/school-mkt-2026';
+  const isSimple = location.pathname === '/school-mkt-2026' || location.pathname === '/school-mkt-diverge';
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);

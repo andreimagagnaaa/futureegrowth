@@ -27,6 +27,7 @@ import { Clients } from './pages/Clients';
 import { ClientDetails } from './pages/ClientDetails';
 import { Login } from './pages/Login';
 import { School } from './pages/School';
+import { SchoolDiverge } from './pages/SchoolDiverge';
 import { RequireAuth } from './components/RequireAuth';
 import { Analytics } from "@vercel/analytics/react"
 
@@ -63,6 +64,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/marketing-plan" element={<MarketingPlan />} />
           <Route path="/school-mkt-2026" element={<School />} />
+          <Route path="/school-mkt-diverge" element={<SchoolDiverge />} />
           <Route path="/login" element={<Login />} />
           
           {/* Internal System Routes */}

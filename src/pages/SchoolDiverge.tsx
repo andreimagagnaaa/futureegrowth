@@ -239,7 +239,7 @@ export const SchoolDiverge = () => {
       </section>
 
       {/* 1.6 Symptoms Section */}
-      <section className="py-24 border-t border-white/5 bg-[#020202]">
+      <section id="diagnosis-section" className="py-24 border-t border-white/5 bg-[#020202]">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
