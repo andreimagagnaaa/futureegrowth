@@ -6,44 +6,163 @@ import { Bot, TrendingUp, Heart, Eye, ArrowRight, CheckCircle2, AlertTriangle, U
 import { Button } from '../components/Button';
 
 export const School = () => {
+  const scrollToThesis = () => {
+    const element = document.getElementById('thesis');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background text-white selection:bg-primary/20 selection:text-primary">
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-background to-background opacity-50" />
+      <section className="relative min-h-[80vh] flex items-center pt-32 pb-20 overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-primary/10 via-background to-background" />
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-10" />
+        
         <div className="container mx-auto px-4 relative z-10">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="max-w-4xl mx-auto text-center"
-          >
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-6">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-              </span>
-              ESTRATÉGIA DE CONTEÚDO MULTICANAL
-            </div>
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6">
-              Marketing Digital 2026: <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-500">
-                A Grande Divergência
-              </span>
-            </h1>
-            <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
-              O que é automatizável virou commodity. O que é humano virou luxo premium. 
-              E no meio? Extinção. Bem-vindo à nova era do mercado digital.
-            </p>
-          </motion.div>
+          <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+            
+            {/* Left Column: Content */}
+            <motion.div 
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-left"
+            >
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-primary text-[10px] font-medium mb-6 backdrop-blur-sm hover:bg-white/10 transition-colors cursor-default">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                </span>
+                ESTRATÉGIA DE CONTEÚDO MULTICANAL
+              </div>
+              
+              <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-6 leading-tight">
+                Marketing Digital 2026: <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-400 to-purple-600">
+                  A Grande Divergência
+                </span>
+              </h1>
+              
+              <p className="text-base text-gray-400 mb-8 max-w-lg leading-relaxed">
+                O que é automatizável virou commodity. <br />
+                O que é humano virou luxo premium. <br />
+                <span className="text-white font-medium">E no meio? Extinção.</span> <br />
+                Bem-vindo à nova era do mercado digital.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 items-center">
+                <Button onClick={scrollToThesis} size="lg" className="bg-primary text-black hover:bg-primary/90 h-10 px-6 text-sm w-full sm:w-auto rounded-full">
+                  Começar a Leitura
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
+            </motion.div>
+
+            {/* Right Column: Realistic UI Visual */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative hidden md:block"
+            >
+              {/* Main Interface Container */}
+              <div className="relative rounded-xl bg-[#0A0A0A] border border-white/10 shadow-2xl overflow-hidden group hover:border-primary/20 transition-colors duration-500">
+                {/* Window Header */}
+                <div className="h-6 bg-white/5 border-b border-white/5 flex items-center px-3 gap-1.5">
+                  <div className="w-2 h-2 rounded-full bg-red-500/20 border border-red-500/50" />
+                  <div className="w-2 h-2 rounded-full bg-yellow-500/20 border border-yellow-500/50" />
+                  <div className="w-2 h-2 rounded-full bg-green-500/20 border border-green-500/50" />
+                </div>
+
+                {/* Content Area */}
+                <div className="p-5 relative min-h-[280px] flex flex-col">
+                  {/* Grid Background */}
+                  <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:24px_24px]" />
+                  
+                  <div className="relative z-10 flex-1 flex flex-col justify-between">
+                    {/* Top Stats */}
+                    <div className="flex justify-between items-start mb-6">
+                      <div className="bg-blue-500/10 border border-blue-500/20 rounded-lg p-2.5 backdrop-blur-md">
+                        <div className="flex items-center gap-1.5 text-blue-400 mb-1">
+                          <Bot size={12} />
+                          <span className="text-[9px] font-bold uppercase">Automação</span>
+                        </div>
+                        <div className="text-base font-bold text-white">Commodity</div>
+                        <div className="text-[9px] text-gray-400">Custo → $0</div>
+                      </div>
+
+                      <div className="bg-orange-500/10 border border-orange-500/20 rounded-lg p-2.5 backdrop-blur-md text-right">
+                        <div className="flex items-center gap-1.5 text-orange-400 mb-1 justify-end">
+                          <span className="text-[9px] font-bold uppercase">Humanidade</span>
+                          <Heart size={12} />
+                        </div>
+                        <div className="text-base font-bold text-white">Premium</div>
+                        <div className="text-[9px] text-gray-400">Valor → ∞</div>
+                      </div>
+                    </div>
+
+                    {/* The Divergence Graph Representation */}
+                    <div className="relative h-28 w-full">
+                      {/* Middle Line (Extinction) */}
+                      <div className="absolute top-1/2 left-0 right-0 h-px bg-white/10 border-t border-dashed border-white/20" />
+                      <div className="absolute top-1/2 right-0 -translate-y-1/2 text-[9px] text-red-500 font-mono bg-red-500/10 px-1.5 py-0.5 rounded">
+                        EXTINÇÃO
+                      </div>
+
+                      {/* Curves */}
+                      <svg className="absolute inset-0 w-full h-full overflow-visible" preserveAspectRatio="none">
+                        {/* Upward Curve (Human) */}
+                        <path 
+                          d="M0,56 C70,56 140,56 280,10" 
+                          fill="none" 
+                          stroke="url(#gradientHuman)" 
+                          strokeWidth="2"
+                          className="drop-shadow-[0_0_8px_rgba(249,115,22,0.4)]"
+                        />
+                        {/* Downward Curve (Automation) */}
+                        <path 
+                          d="M0,56 C70,56 140,56 280,102" 
+                          fill="none" 
+                          stroke="url(#gradientAuto)" 
+                          strokeWidth="2"
+                          className="drop-shadow-[0_0_8px_rgba(59,130,246,0.4)]"
+                        />
+                        <defs>
+                          <linearGradient id="gradientHuman" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stopColor="#333" stopOpacity="0" />
+                            <stop offset="100%" stopColor="#f97316" />
+                          </linearGradient>
+                          <linearGradient id="gradientAuto" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stopColor="#333" stopOpacity="0" />
+                            <stop offset="100%" stopColor="#3b82f6" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+          </div>
         </div>
       </section>
 
       {/* Introduction / The Thesis */}
-      <section className="py-20 border-t border-white/5 bg-white/5">
+      <section id="thesis" className="py-20 border-t border-white/5 bg-white/5">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-4xl mx-auto"
+          >
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl font-bold mb-6">A Tese Central</h2>
@@ -105,14 +224,20 @@ export const School = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Axis 1 */}
       <section className="py-20 border-t border-white/5">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-4xl mx-auto"
+          >
             <div className="flex items-center gap-4 mb-8">
               <span className="text-6xl font-bold text-white/5">01</span>
               <h2 className="text-3xl font-bold">A Morte do Intermediário</h2>
@@ -158,14 +283,20 @@ export const School = () => {
                 </ul>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Axis 2 */}
       <section className="py-20 border-t border-white/5 bg-white/5">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-4xl mx-auto"
+          >
             <div className="flex items-center gap-4 mb-8">
               <span className="text-6xl font-bold text-white/5">02</span>
               <h2 className="text-3xl font-bold">Polarização Econômica</h2>
@@ -198,14 +329,20 @@ export const School = () => {
                 <p className="text-sm text-gray-400">Margem real, exclusividade, proximidade. Comunidade e mentorias.</p>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Axis 3 */}
       <section className="py-20 border-t border-white/5">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-4xl mx-auto"
+          >
             <div className="flex items-center gap-4 mb-8">
               <span className="text-6xl font-bold text-white/5">03</span>
               <h2 className="text-3xl font-bold">O Paradoxo da Autenticidade</h2>
@@ -246,14 +383,20 @@ export const School = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Axis 4 */}
       <section className="py-20 border-t border-white/5 bg-white/5">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-4xl mx-auto"
+          >
             <div className="flex items-center gap-4 mb-8">
               <span className="text-6xl font-bold text-white/5">04</span>
               <h2 className="text-3xl font-bold">Propriedade de Atenção</h2>
@@ -289,14 +432,20 @@ export const School = () => {
                 </ul>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Synthesis Framework */}
       <section className="py-20 border-t border-white/5">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto bg-black border border-white/10 rounded-3xl p-8 md:p-16 relative overflow-hidden">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-5xl mx-auto bg-black border border-white/10 rounded-3xl p-8 md:p-16 relative overflow-hidden"
+          >
             <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 blur-[100px] rounded-full pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/20 blur-[100px] rounded-full pointer-events-none" />
             
@@ -350,14 +499,20 @@ export const School = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* CTA / Footer Area */}
       <section className="py-20 border-t border-white/5 bg-white/5 text-center">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-6">Pronto para o Futuro?</h2>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-3xl font-bold mb-6">Pronto para o Futuro?</h2>
           <p className="text-gray-400 max-w-2xl mx-auto mb-8">
             A Grande Divergência não é sobre tecnologia. É sobre escolha.
             Você vai automatizar a eficiência e humanizar a conexão? Ou vai tentar competir no meio e desaparecer?
@@ -368,6 +523,7 @@ export const School = () => {
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </Link>
+          </motion.div>
         </div>
       </section>
 
