@@ -36,7 +36,7 @@ export const SchoolDiverge = () => {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
                 </span>
-                MÉTODO D.I.V.E.R.G.E.™
+                MÉTODO D.I.V.E.R.G.E
               </div>
 
               <h1 className="text-3xl font-bold tracking-tight mb-6 leading-tight text-white">
@@ -289,7 +289,7 @@ export const SchoolDiverge = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-white">O Protocolo D.I.V.E.R.G.E.</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-white">O Protocolo D.I.V.E.R.G.E</h2>
               <p className="text-gray-400 max-w-3xl mx-auto text-base">
                 A sequência lógica para escapar da extinção e construir um ativo antifrágil.
               </p>
@@ -413,7 +413,7 @@ export const SchoolDiverge = () => {
                 <div>
                   <h3 className="text-lg font-bold mb-3 text-white">Metodologia Proprietária</h3>
                   <p className="text-gray-500 leading-relaxed group-hover:text-gray-400 transition-colors text-sm">
-                    Acesso ao framework D.I.V.E.R.G.E., desenvolvido e validado em campo.
+                    Acesso ao framework D.I.V.E.R.G.E, desenvolvido e validado em campo.
                   </p>
                 </div>
               </motion.div>
@@ -518,8 +518,8 @@ export const SchoolDiverge = () => {
                     </div>
                   </div>
                   
-                  <h3 className="text-base font-bold text-white mb-4 group-hover:text-primary transition-colors">{phase.title}</h3>
-                  <p className="text-gray-500 text-xs leading-relaxed group-hover:text-gray-400 transition-colors">{phase.desc}</p>
+                  <h3 className="text-lg font-bold text-white mb-4 group-hover:text-primary transition-colors">{phase.title}</h3>
+                  <p className="text-gray-500 text-sm leading-relaxed group-hover:text-gray-400 transition-colors">{phase.desc}</p>
                 </motion.div>
               ))}
             </div>
