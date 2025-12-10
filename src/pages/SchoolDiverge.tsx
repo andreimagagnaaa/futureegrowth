@@ -613,7 +613,7 @@ export const SchoolDiverge = () => {
                       className="bg-primary hover:bg-primary-dark text-black px-10 py-6 text-lg rounded-full font-bold transition-all hover:scale-105 shadow-[0_0_40px_-10px_rgba(0,255,153,0.3)]"
                       onClick={() => window.open('https://wa.me/5511999999999', '_blank')}
                     >
-                      Solicitar Acesso
+                      Conhecer a Futuree Growth
                       <ArrowRight className="ml-2 w-5 h-5" />
                     </Button>
                     <p className="text-sm text-gray-500 mt-4 sm:mt-0">
