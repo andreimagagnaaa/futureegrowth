@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Button } from './Button';
 import { ContactModal } from './ContactModal';
 
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const location = useLocation();
+  const isSimple = location.pathname === '/school-mkt-2026';
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -29,13 +32,15 @@ export const Navbar = () => {
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
-          <a href="#methodology" className="hover:text-white transition-colors">Metodologia</a>
-          <a href="#solutions" className="hover:text-white transition-colors">Soluções</a>
-          <a href="#results" className="hover:text-white transition-colors">Resultados</a>
-          <a href="#about" className="hover:text-white transition-colors">Sobre</a>
-          <a href="#faq" className="hover:text-white transition-colors">FAQ</a>
-        </div>
+        {!isSimple && (
+          <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
+            <a href="#methodology" className="hover:text-white transition-colors">Metodologia</a>
+            <a href="#solutions" className="hover:text-white transition-colors">Soluções</a>
+            <a href="#results" className="hover:text-white transition-colors">Resultados</a>
+            <a href="#about" className="hover:text-white transition-colors">Sobre</a>
+            <a href="#faq" className="hover:text-white transition-colors">FAQ</a>
+          </div>
+        )}
 
         {/* CTA */}
         <div className="hidden md:flex items-center gap-4">

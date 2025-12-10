@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../sections/Footer';
 import { motion } from 'framer-motion';
@@ -357,15 +358,17 @@ export const School = () => {
       {/* CTA / Footer Area */}
       <section className="py-20 border-t border-white/5 bg-white/5 text-center">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-6">Futuree Business School</h2>
+          <h2 className="text-3xl font-bold mb-6">Pronto para o Futuro?</h2>
           <p className="text-gray-400 max-w-2xl mx-auto mb-8">
             A Grande Divergência não é sobre tecnologia. É sobre escolha.
             Você vai automatizar a eficiência e humanizar a conexão? Ou vai tentar competir no meio e desaparecer?
           </p>
-          <Button size="lg" className="bg-primary text-black hover:bg-primary/90">
-            Acessar Frameworks de Implementação
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
+          <Link to="/">
+            <Button size="lg" className="bg-primary text-black hover:bg-primary/90">
+              Conhecer a Futuree Growth
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </Link>
         </div>
       </section>
 

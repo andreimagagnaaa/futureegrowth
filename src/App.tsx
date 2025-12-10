@@ -62,7 +62,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/marketing-plan" element={<MarketingPlan />} />
-          <Route path="/school" element={<School />} />
+          <Route path="/school-mkt-2026" element={<School />} />
           <Route path="/login" element={<Login />} />
           
           {/* Internal System Routes */}
