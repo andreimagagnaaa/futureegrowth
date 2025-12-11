@@ -41,6 +41,7 @@ import { SchoolMicroSaaS } from './pages/SchoolMicroSaaS';
 import { SchoolYouTubeLong } from './pages/SchoolYouTubeLong';
 import { ProposalSellMentors } from './pages/ProposalSellMentors';
 import { ProposalDCLC } from './pages/ProposalDCLC';
+import { ProposalUnita } from './pages/ProposalUnita';
 import { RequireAuth } from './components/RequireAuth';
 import { Analytics } from "@vercel/analytics/react"
 
@@ -89,8 +90,9 @@ function App() {
         <Route path="/school-mkt-Vibe" element={<SchoolVibe />} />
         <Route path="/school-mkt-MicroSaaS" element={<SchoolMicroSaaS />} />
         <Route path="/school-mkt-yt-longo" element={<SchoolYouTubeLong />} />
-        <Route path="/proposta-SellMentors" element={<ProposalSellMentors />} />
+                <Route path="/proposta-sellmentors" element={<ProposalSellMentors />} />
         <Route path="/proposta-dclc" element={<ProposalDCLC />} />
+        <Route path="/proposta-unita" element={<ProposalUnita />} />
         <Route path="/login" element={<Login />} />          {/* Internal System Routes */}
           <Route path="/business" element={
             <RequireAuth>
