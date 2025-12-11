@@ -38,6 +38,7 @@ import { SchoolLever } from './pages/SchoolLever';
 import { SchoolPLG } from './pages/SchoolPLG';
 import { SchoolVibe } from './pages/SchoolVibe';
 import { SchoolMicroSaaS } from './pages/SchoolMicroSaaS';
+import { SchoolYouTubeLong } from './pages/SchoolYouTubeLong';
 import { RequireAuth } from './components/RequireAuth';
 import { Analytics } from "@vercel/analytics/react"
 
@@ -85,6 +86,7 @@ function App() {
         <Route path="/school-mkt-PLG" element={<SchoolPLG />} />
         <Route path="/school-mkt-Vibe" element={<SchoolVibe />} />
         <Route path="/school-mkt-MicroSaaS" element={<SchoolMicroSaaS />} />
+        <Route path="/school-mkt-yt-longo" element={<SchoolYouTubeLong />} />
         <Route path="/login" element={<Login />} />          {/* Internal System Routes */}
           <Route path="/business" element={
             <RequireAuth>
