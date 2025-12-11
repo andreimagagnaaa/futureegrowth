@@ -1,7 +1,7 @@
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../sections/Footer';
 import { motion } from 'framer-motion';
-import { ArrowRight, Play, Clock, Users, TrendingUp, Youtube, Video, Mic, Monitor, Film, BarChart3, Heart, Eye, Zap, AlertTriangle, Skull, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Users, TrendingUp, Youtube, Video, Mic, Monitor, Film, BarChart3, Heart, Eye, Zap, AlertTriangle, Skull, CheckCircle2 } from 'lucide-react';
 import { Button } from '../components/Button';
 
 export const SchoolYouTubeLong = () => {
