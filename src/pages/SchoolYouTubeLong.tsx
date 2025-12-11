@@ -1,7 +1,7 @@
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../sections/Footer';
 import { motion } from 'framer-motion';
-import { ArrowRight, Users, TrendingUp, Youtube, Video, Mic, Monitor, Film, BarChart3, Heart, Eye, Zap, AlertTriangle, Skull, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Users, TrendingUp, Youtube, Video, Mic, Monitor, Film, BarChart3, Heart, Eye, Zap, AlertTriangle, Skull, CheckCircle2, DollarSign, Image as ImageIcon, MousePointer, Layers, Share2 } from 'lucide-react';
 import { Button } from '../components/Button';
 
 export const SchoolYouTubeLong = () => {
@@ -372,7 +372,226 @@ export const SchoolYouTubeLong = () => {
         </div>
       </section>
 
-      {/* 6. The Graveyard (Mistakes) */}
+      {/* 6. Monetization Ecosystem */}
+      <section className="py-32 bg-[#020202] relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+            <div>
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-xs font-medium mb-6">
+                <DollarSign size={14} />
+                MONETIZAÇÃO
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+                O Iceberg do <br />
+                <span className="text-green-400">Lucro Real</span>
+              </h2>
+              <p className="text-lg text-gray-400 mb-8 leading-relaxed">
+                Muitos criadores focam apenas no AdSense (centavos). O dinheiro real está no que você constrói <i>atrás</i> do canal. O YouTube é apenas o topo do funil.
+              </p>
+              
+              <div className="space-y-6">
+                {[
+                  {
+                    title: "AdSense (Topo)",
+                    desc: "O dinheiro do 'view'. Geralmente paga as contas básicas, mas não te deixa rico. É instável.",
+                    color: "bg-gray-800",
+                    text: "text-gray-300"
+                  },
+                  {
+                    title: "Patrocínios (Meio)",
+                    desc: "Marcas pagando pela sua audiência. Ótimo dinheiro, mas você ainda vende seu tempo.",
+                    color: "bg-blue-900/30",
+                    text: "text-blue-300"
+                  },
+                  {
+                    title: "Produtos Próprios (Fundo)",
+                    desc: "A mina de ouro. Cursos, consultorias, software. Margem de 90%+. Controle total.",
+                    color: "bg-green-900/30",
+                    text: "text-green-300 border-green-500/30"
+                  }
+                ].map((item, i) => (
+                  <div key={i} className={`p-6 rounded-xl border border-white/5 ${item.color} transition-transform hover:translate-x-2`}>
+                    <h3 className={`font-bold text-lg mb-1 ${item.text}`}>{item.title}</h3>
+                    <p className="text-sm text-gray-400">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-tr from-green-500/20 to-transparent blur-3xl rounded-full" />
+              <div className="relative bg-[#0A0A0A] border border-white/10 rounded-2xl p-8 shadow-2xl">
+                <div className="flex flex-col items-center gap-2">
+                  {/* Pyramid Visualization */}
+                  <div className="w-32 h-24 bg-gray-800 clip-path-triangle flex items-center justify-center text-xs text-gray-400 mb-1 rounded-t-lg">AdSense</div>
+                  <div className="w-48 h-32 bg-blue-900/40 flex items-center justify-center text-sm text-blue-300 font-bold mb-1">Sponsors</div>
+                  <div className="w-64 h-40 bg-green-600 flex items-center justify-center text-lg text-white font-bold shadow-[0_0_30px_rgba(22,163,74,0.4)]">SEU PRODUTO</div>
+                </div>
+                <div className="mt-8 text-center">
+                  <p className="text-sm text-gray-500 uppercase tracking-widest mb-2">Potencial de Receita</p>
+                  <div className="text-3xl font-bold text-white">$1k <span className="text-gray-600">vs</span> $10k <span className="text-gray-600">vs</span> $100k</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 7. Content Waterfall */}
+      <section className="py-32 bg-[#050505] border-y border-white/5">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-20">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Multiplicação de Conteúdo</h2>
+            <p className="text-lg text-gray-400 max-w-2xl mx-auto">Trabalhe uma vez, distribua em todo lugar. O método "Content Waterfall".</p>
+          </div>
+
+          <div className="relative max-w-5xl mx-auto">
+            {/* Central Line */}
+            <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-red-500 via-purple-500 to-blue-500 -translate-x-1/2 hidden md:block" />
+
+            <div className="space-y-24 relative z-10">
+              {/* Step 1: The Source */}
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                <div className="md:w-1/2 text-right pr-12 hidden md:block">
+                  <h3 className="text-2xl font-bold text-white mb-2">1. O Vídeo Pilar</h3>
+                  <p className="text-gray-400">Um vídeo denso de 20-40 minutos no YouTube. É a fonte de tudo.</p>
+                </div>
+                <div className="w-16 h-16 rounded-full bg-red-600 flex items-center justify-center shadow-[0_0_20px_rgba(220,38,38,0.5)] border-4 border-[#050505] shrink-0">
+                  <Youtube className="text-white w-8 h-8" />
+                </div>
+                <div className="md:w-1/2 pl-4 md:pl-12 text-center md:text-left">
+                  <h3 className="text-2xl font-bold text-white mb-2 md:hidden">1. O Vídeo Pilar</h3>
+                  <div className="bg-white/5 p-6 rounded-xl border border-white/10 inline-block">
+                    <span className="text-red-400 font-mono text-sm">Arquivo_Mestre.mp4</span>
+                  </div>
+                  <p className="text-gray-400 mt-4 md:hidden">Um vídeo denso de 20-40 minutos no YouTube. É a fonte de tudo.</p>
+                </div>
+              </div>
+
+              {/* Step 2: The Split */}
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                <div className="md:w-1/2 text-right pr-12 hidden md:block">
+                   <div className="grid grid-cols-3 gap-2 justify-end">
+                      {[1,2,3].map(i => (
+                        <div key={i} className="h-24 w-16 bg-purple-500/20 border border-purple-500/30 rounded-lg" />
+                      ))}
+                   </div>
+                </div>
+                <div className="w-16 h-16 rounded-full bg-purple-600 flex items-center justify-center shadow-[0_0_20px_rgba(147,51,234,0.5)] border-4 border-[#050505] shrink-0">
+                  <Layers className="text-white w-8 h-8" />
+                </div>
+                <div className="md:w-1/2 pl-4 md:pl-12 text-center md:text-left">
+                  <h3 className="text-2xl font-bold text-white mb-2">2. Micro-Cortes</h3>
+                  <p className="text-gray-400 mb-4">Extraia 3-5 Shorts/Reels dos melhores momentos. Poste no TikTok, IG e YT Shorts.</p>
+                  <div className="flex gap-2 justify-center md:justify-start">
+                    <span className="px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 text-xs border border-purple-500/20">TikTok</span>
+                    <span className="px-3 py-1 rounded-full bg-pink-500/10 text-pink-400 text-xs border border-pink-500/20">Reels</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Step 3: The Text */}
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                <div className="md:w-1/2 text-right pr-12 hidden md:block">
+                  <h3 className="text-2xl font-bold text-white mb-2">3. Texto & Imagem</h3>
+                  <p className="text-gray-400">Transcreva. Vire uma Thread no Twitter. Vire um post no LinkedIn. Vire um Email.</p>
+                </div>
+                <div className="w-16 h-16 rounded-full bg-blue-600 flex items-center justify-center shadow-[0_0_20px_rgba(37,99,235,0.5)] border-4 border-[#050505] shrink-0">
+                  <Share2 className="text-white w-8 h-8" />
+                </div>
+                <div className="md:w-1/2 pl-4 md:pl-12 text-center md:text-left">
+                   <h3 className="text-2xl font-bold text-white mb-2 md:hidden">3. Texto & Imagem</h3>
+                   <div className="space-y-2">
+                      <div className="bg-white/5 p-3 rounded-lg border border-white/10 text-xs text-gray-400 text-left max-w-xs mx-auto md:mx-0">
+                        "Acabei de postar um vídeo sobre..."
+                      </div>
+                      <div className="bg-white/5 p-3 rounded-lg border border-white/10 text-xs text-gray-400 text-left max-w-xs mx-auto md:mx-0 opacity-70">
+                        "A lição principal foi..."
+                      </div>
+                   </div>
+                   <p className="text-gray-400 mt-4 md:hidden">Transcreva. Vire uma Thread no Twitter. Vire um post no LinkedIn. Vire um Email.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 8. Thumbnail Psychology */}
+      <section className="py-32 bg-[#020202]">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto bg-[#0A0A0A] rounded-3xl border border-white/10 overflow-hidden">
+            <div className="grid md:grid-cols-2">
+              <div className="p-12 flex flex-col justify-center">
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 text-xs font-medium mb-6 w-fit">
+                  <ImageIcon size={14} />
+                  A ARTE DO CLIQUE
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+                  Psicologia da <br />
+                  <span className="text-orange-500">Thumbnail</span>
+                </h2>
+                <p className="text-gray-400 mb-8 leading-relaxed">
+                  Se a taxa de clique (CTR) for baixa, o YouTube para de recomendar seu vídeo. A Thumb é uma promessa visual.
+                </p>
+                
+                <ul className="space-y-4">
+                  {[
+                    { label: "Contraste Extremo", desc: "Cores que saltam no fundo branco/preto do YouTube." },
+                    { label: "Expressão Facial", desc: "Emoção clara (medo, alegria, surpresa) ativa neurônios espelho." },
+                    { label: "Regra dos 3 Elementos", desc: "Não polua. Rosto + Objeto + Texto Curto." },
+                    { label: "Curiosity Gap", desc: "Mostre algo que o cérebro precisa 'fechar' assistindo." }
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <div className="mt-1 w-5 h-5 rounded-full bg-orange-500/20 flex items-center justify-center text-orange-500 shrink-0">
+                        <CheckCircle2 size={12} />
+                      </div>
+                      <div>
+                        <strong className="text-white block">{item.label}</strong>
+                        <span className="text-sm text-gray-500">{item.desc}</span>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              
+              <div className="bg-white/5 p-12 flex items-center justify-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-orange-500/10 via-transparent to-transparent" />
+                
+                {/* Mock Thumbnail */}
+                <div className="relative w-full aspect-video bg-[#1a1a1a] rounded-xl border border-white/10 shadow-2xl overflow-hidden group cursor-pointer">
+                  {/* Background Image Placeholder */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-black opacity-50" />
+                  
+                  {/* Face */}
+                  <div className="absolute right-4 bottom-0 w-1/2 h-4/5 bg-gray-700 rounded-t-full opacity-80 group-hover:scale-105 transition-transform duration-500" />
+                  
+                  {/* Text */}
+                  <div className="absolute left-6 top-1/2 -translate-y-1/2">
+                    <div className="text-4xl font-black text-white uppercase leading-none drop-shadow-lg transform -rotate-2">
+                      Segredo <br />
+                      <span className="text-orange-500">Revelado</span>
+                    </div>
+                  </div>
+                  
+                  {/* Arrow */}
+                  <div className="absolute top-6 right-6 text-red-500 transform rotate-12">
+                    <MousePointer size={48} className="fill-red-500 stroke-white stroke-2" />
+                  </div>
+
+                  {/* CTR Badge */}
+                  <div className="absolute bottom-4 left-4 bg-black/80 backdrop-blur px-3 py-1 rounded text-xs font-bold text-green-400 border border-green-500/30">
+                    CTR: 12.5%
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 9. The Graveyard (Mistakes) */}
       <section className="py-32 bg-red-950/10 border-y border-red-500/10 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-red-500/5 via-transparent to-transparent" />
         
