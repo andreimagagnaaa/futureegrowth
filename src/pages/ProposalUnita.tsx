@@ -293,25 +293,25 @@ export const ProposalUnita = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold mb-4 text-center text-white font-serif">Cronograma (Primeiros 90 Dias)</h2>
-              <p className="text-center text-gray-400 mb-16">Aproveitando Nov/Dez para construir a fundação e ativar o motor em Jan/Fev.</p>
+              <p className="text-center text-gray-400 mb-16">Iniciando o ano com força total para construir a fundação e ativar o motor.</p>
               
               <div className="space-y-12 relative before:absolute before:left-8 before:top-4 before:bottom-4 before:w-0.5 before:bg-slate-500/20">
                 {[
                   { 
                     phase: "FASE 1: ESTRUTURAÇÃO", 
-                    period: "Novembro", 
+                    period: "Janeiro", 
                     goal: "Construir a 'pista de pouso'.",
                     steps: ["Semanas 1-2: Onboarding, Definição da Linha Editorial, Briefing.", "Semanas 3-4: Desenvolvimento da 1ª LP + Lead Magnet, CRM."]
                   },
                   { 
                     phase: "FASE 1.5: TESTES", 
-                    period: "Dezembro", 
+                    period: "Fevereiro", 
                     goal: "Coletar dados e gerar 'sinais de fumaça'.",
                     steps: ["Semanas 5-6: Lançamento Google Ads (Fundo de Funil) e 1ª campanha LinkedIn.", "Semanas 7-8: Análise dos primeiros leads, otimização de criativos."]
                   },
                   { 
                     phase: "FASE 2: ATIVAÇÃO", 
-                    period: "Jan/Fev 2026", 
+                    period: "Março", 
                     goal: "Escalar o que funciona e entregar pipeline.",
                     steps: ["Semanas 9-10: Análise de performance, otimizar ou pausar ruins.", "Semanas 11-12: Acelerar investimento nos vencedores, entrega do pipeline."]
                   }
@@ -355,9 +355,14 @@ export const ProposalUnita = () => {
                     <span>R$ 3.000 / mês</span>
                   </div>
                   <p className="text-xs text-gray-500 mt-2">Contrato mínimo de 6 meses.</p>
+                  
+                  <div className="mt-6 p-4 bg-green-900/20 border border-green-500/30 rounded text-center">
+                    <span className="text-green-400 font-bold text-sm uppercase tracking-wider block mb-1">Bônus Exclusivo</span>
+                    <p className="text-gray-300 text-sm">Assinando em Dezembro, o primeiro pagamento será apenas em <strong className="text-white">Janeiro de 2026</strong>.</p>
+                  </div>
                 </div>
 
-                <Button className="w-full bg-amber-600 hover:bg-amber-500 text-white h-12 text-lg">
+                <Button onClick={() => window.open('https://wa.me/5551998965518', '_blank')} className="w-full bg-amber-600 hover:bg-amber-500 text-white h-12 text-lg">
                   Aprovar Proposta
                 </Button>
               </div>
@@ -389,8 +394,8 @@ export const ProposalUnita = () => {
             <div className="bg-[#131825] p-12 rounded-sm border border-slate-500/20 max-w-3xl mx-auto">
               <h3 className="text-2xl font-bold text-white mb-4">Pronto para Construir seu Motor de Aquisição?</h3>
               <p className="text-gray-400 mb-8">Estamos à disposição para iniciar esta parceria de sucesso.</p>
-              <Button onClick={() => window.open('http://wa.me/5551993569285', '_blank')} size="lg" className="bg-white hover:bg-gray-100 text-slate-900 font-bold py-4 px-12 rounded-full shadow-lg">
-                FALAR COM CONSULTOR
+              <Button onClick={() => window.open('https://wa.me/5551998965518', '_blank')} size="lg" className="bg-white hover:bg-gray-100 text-slate-900 font-bold py-4 px-12 rounded-full shadow-lg">
+                FALE CONOSCO
               </Button>
             </div>
           </div>
