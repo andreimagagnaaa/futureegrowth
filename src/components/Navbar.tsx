@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { Button } from './Button';
 import { ContactModal } from './ContactModal';
 
 export const Navbar = () => {
@@ -20,24 +19,12 @@ export const Navbar = () => {
           : 'bg-transparent py-6'
       }`}
     >
-      <div className="container mx-auto px-4 flex items-center justify-between">
+      <div className="container mx-auto px-4 flex items-center justify-center">
         {/* Logo */}
         <div className="flex items-center gap-2">
           <div className="text-xl font-sans font-bold tracking-tighter text-white flex items-center">
             FUTUREE<span className="text-primary">.</span><span className="font-light text-gray-300 tracking-[0.2em] text-sm ml-1.5 mt-0.5">GROWTH</span>
           </div>
-        </div>
-
-        {/* CTA */}
-        <div className="hidden md:flex items-center gap-4">
-          <Button 
-            size="sm" 
-            variant="outline" 
-            className="border-primary/50 hover:bg-primary hover:text-black hover:border-primary"
-            onClick={() => setIsModalOpen(true)}
-          >
-            Agendar Diagnóstico
-          </Button>
         </div>
       </div>
 
