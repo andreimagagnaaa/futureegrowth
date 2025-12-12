@@ -39,6 +39,9 @@ import { SchoolPLG } from './pages/SchoolPLG';
 import { SchoolVibe } from './pages/SchoolVibe';
 import { SchoolMicroSaaS } from './pages/SchoolMicroSaaS';
 import { SchoolYouTubeLong } from './pages/SchoolYouTubeLong';
+import { SchoolMktInjusta } from './pages/SchoolMktInjusta';
+import { SchoolAIVertical } from './pages/SchoolAIVertical';
+import { SchoolFounderMode } from './pages/SchoolFounderMode';
 import { ProposalSellMentors } from './pages/ProposalSellMentors';
 import { ProposalDCLC } from './pages/ProposalDCLC';
 import { ProposalUnita } from './pages/ProposalUnita';
@@ -90,7 +93,10 @@ function App() {
         <Route path="/school-mkt-Vibe" element={<SchoolVibe />} />
         <Route path="/school-mkt-MicroSaaS" element={<SchoolMicroSaaS />} />
         <Route path="/school-mkt-yt-longo" element={<SchoolYouTubeLong />} />
-                <Route path="/proposta-sellmentors" element={<ProposalSellMentors />} />
+        <Route path="/school-mkt-injusta" element={<SchoolMktInjusta />} />
+        <Route path="/school-mkt-ai-vertical" element={<SchoolAIVertical />} />
+        <Route path="/school-mkt-founder-mode" element={<SchoolFounderMode />} />
+        <Route path="/proposta-sellmentors" element={<ProposalSellMentors />} />
         <Route path="/proposta-dclc" element={<ProposalDCLC />} />
         <Route path="/proposta-unita" element={<ProposalUnita />} />
         <Route path="/login" element={<Login />} />          {/* Internal System Routes */}

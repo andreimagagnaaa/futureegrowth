@@ -24,7 +24,7 @@ export const MarketingPlan = () => {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/20 via-black to-black opacity-50" />
         <div className="absolute inset-0 bg-grid-pattern opacity-[0.03]" />
         
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -35,7 +35,7 @@ export const MarketingPlan = () => {
                 Plano de Crescimento Acelerado
               </span>
               <h1 className="text-5xl md:text-7xl font-serif font-medium leading-tight mb-8">
-                Pare de <span className="text-gray-500 italic">chutar</span>. <br />
+                Pare de <span className="text-gray-500 italic">achar</span>. <br />
                 Comece a <span className="text-primary">escalar</span>.
               </h1>
               <p className="text-xl text-gray-400 font-light leading-relaxed max-w-2xl mx-auto mb-10">
@@ -57,7 +57,7 @@ export const MarketingPlan = () => {
 
       {/* The Problem: Gambling vs Engineering */}
       <section className="py-24 border-y border-white/5 bg-white/[0.02]">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-serif font-medium mb-6">
@@ -127,7 +127,7 @@ export const MarketingPlan = () => {
 
       {/* Comparison Table Section (New) */}
       <section className="py-24 bg-black relative">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-serif font-medium mb-4">Por que somos diferentes?</h2>
             <p className="text-gray-400">Não somos uma agência tradicional. Somos parceiros de negócio.</p>
@@ -171,7 +171,7 @@ export const MarketingPlan = () => {
 
       {/* The 4 Pillars */}
       <section className="py-32 relative">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="text-center mb-20">
             <span className="text-primary text-xs font-bold tracking-widest uppercase">Nossa Metodologia</span>
             <h2 className="text-4xl md:text-5xl font-serif font-medium mt-4 mb-6">Os 4 Pilares do Plano</h2>
@@ -224,7 +224,7 @@ export const MarketingPlan = () => {
 
       {/* Timeline Section (New) */}
       <section className="py-24 bg-white/[0.02] border-y border-white/5">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-serif font-medium mb-4">Cronograma de Entrega</h2>
             <p className="text-gray-400">Em 4 semanas, você terá o controle total do seu crescimento.</p>
@@ -249,7 +249,7 @@ export const MarketingPlan = () => {
 
       {/* Who is this for Section (New) */}
       <section className="py-24 bg-black">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
             <div>
               <h2 className="text-3xl md:text-4xl font-serif font-medium mb-6">Para quem é este plano?</h2>
@@ -290,7 +290,7 @@ export const MarketingPlan = () => {
       {/* The Deliverables - Detailed */}
       <section className="py-24 bg-gradient-radial-center relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-[0.05]" />
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto relative z-10">
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="order-2 md:order-1">
@@ -343,7 +343,7 @@ export const MarketingPlan = () => {
 
       {/* FAQ */}
       <section className="py-24 bg-white/[0.02]">
-        <div className="container mx-auto px-4 max-w-3xl">
+        <div className="container mx-auto max-w-3xl">
           <h2 className="text-3xl font-serif font-medium mb-12 text-center">Perguntas Frequentes</h2>
           <Accordion>
             <AccordionItem title="Para quem é este plano?">
@@ -365,7 +365,7 @@ export const MarketingPlan = () => {
       {/* CTA Final */}
       <section className="py-32 relative overflow-hidden">
         <div className="absolute inset-0 bg-primary/5" />
-        <div className="container mx-auto px-4 text-center relative z-10">
+        <div className="container mx-auto text-center relative z-10">
           <h2 className="text-4xl md:text-6xl font-serif font-medium mb-8">
             Sua empresa, <br />
             <span className="text-primary">projetada para crescer.</span>
