@@ -1,7 +1,7 @@
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../sections/Footer';
 import { motion } from 'framer-motion';
-import { ArrowRight, Zap, Users, Target, ShieldAlert, Sword, Crown, Eye, Network } from 'lucide-react';
+import { ArrowRight, Zap, Users, Target, ShieldAlert, Sword, Crown, Eye, Network, Brain, Rocket, Fingerprint } from 'lucide-react';
 import { Button } from '../components/Button';
 
 export const SchoolFounderMode = () => {
@@ -21,7 +21,7 @@ export const SchoolFounderMode = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-orange-500/10 via-transparent to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#020202] to-transparent z-10" />
         
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             
             {/* Left Column: Content */}
@@ -136,7 +136,7 @@ export const SchoolFounderMode = () => {
         
         {/* 2. The Great Gaslight */}
         <section className="py-24 border-t border-white/5">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto">
             <div className="max-w-3xl mx-auto text-center mb-16">
               <h2 className="text-3xl font-bold mb-6 text-white font-serif">O Grande "Gaslighting"</h2>
               <p className="text-gray-400 text-lg leading-relaxed">
@@ -172,9 +172,46 @@ export const SchoolFounderMode = () => {
           </div>
         </section>
 
-        {/* 3. The Two Rules */}
+        {/* 3. Case Study: Jobs vs Sculley (NEW) */}
         <section className="py-24 bg-[#050505] border-y border-white/5">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="order-2 md:order-1">
+                <div className="relative rounded-xl overflow-hidden border border-white/10 shadow-2xl">
+                  <div className="absolute inset-0 bg-gradient-to-tr from-orange-900/20 to-transparent mix-blend-overlay" />
+                  <div className="p-8 bg-white/5">
+                    <div className="flex justify-between items-end h-64">
+                      <div className="w-1/3 bg-gray-800/50 rounded-t-lg h-[40%] relative group">
+                        <div className="absolute -top-8 left-1/2 -translate-x-1/2 text-xs text-gray-500 opacity-0 group-hover:opacity-100 transition-opacity">Sculley</div>
+                      </div>
+                      <div className="w-1/3 bg-orange-600 rounded-t-lg h-[90%] relative group shadow-[0_0_30px_rgba(249,115,22,0.3)]">
+                        <div className="absolute -top-8 left-1/2 -translate-x-1/2 text-xs text-orange-400 font-bold">Jobs</div>
+                      </div>
+                    </div>
+                    <div className="mt-4 text-center text-sm text-gray-400">Impacto na Inovação (Ilustrativo)</div>
+                  </div>
+                </div>
+              </div>
+              <div className="order-1 md:order-2">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 text-orange-400 text-xs font-bold mb-4">
+                  <Brain size={14} />
+                  ESTUDO DE CASO
+                </div>
+                <h2 className="text-3xl font-bold mb-6 text-white font-serif">O Efeito Steve Jobs</h2>
+                <p className="text-gray-400 text-lg mb-6">
+                  Quando Steve Jobs foi demitido da Apple, a empresa foi entregue a "gestores profissionais". Eles seguiram todas as regras do MBA. O resultado? A Apple quase faliu.
+                </p>
+                <p className="text-gray-400 text-lg mb-6">
+                  Ao retornar, Jobs não agiu como um CEO tradicional. Ele realizava reuniões semanais de produto, revisava pixels e demitia quem não tinha paixão. Ele operava em <strong>Founder Mode</strong>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 4. The Two Rules */}
+        <section className="py-24 border-b border-white/5">
+          <div className="container mx-auto">
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <div>
                 <h2 className="text-3xl font-bold mb-6 text-white font-serif">Como Operar em Founder Mode</h2>
@@ -245,9 +282,47 @@ export const SchoolFounderMode = () => {
           </div>
         </section>
 
-        {/* 4. Signs You Are in Manager Mode */}
+        {/* 5. Hiring Animals (NEW) */}
+        <section className="py-24 bg-[#050505] border-b border-white/5">
+          <div className="container mx-auto">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold mb-6 text-white font-serif">Contratando para a Guerra</h2>
+                <p className="text-gray-400 text-lg">
+                  Em Founder Mode, você não contrata currículos. Você contrata obsessão.
+                </p>
+              </div>
+              
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="p-6 bg-white/5 rounded-xl border border-white/10">
+                  <Rocket className="text-orange-400 mb-4" size={32} />
+                  <h3 className="text-lg font-bold text-white mb-2">Bias for Action</h3>
+                  <p className="text-sm text-gray-400">
+                    Prefira quem pede desculpas em vez de permissão. A velocidade é a única vantagem competitiva duradoura.
+                  </p>
+                </div>
+                <div className="p-6 bg-white/5 rounded-xl border border-white/10">
+                  <Fingerprint className="text-orange-400 mb-4" size={32} />
+                  <h3 className="text-lg font-bold text-white mb-2">Ownership Extremo</h3>
+                  <p className="text-sm text-gray-400">
+                    Pessoas que agem como donos não dizem "isso não é minha função". Elas resolvem o problema.
+                  </p>
+                </div>
+                <div className="p-6 bg-white/5 rounded-xl border border-white/10">
+                  <Brain className="text-orange-400 mb-4" size={32} />
+                  <h3 className="text-lg font-bold text-white mb-2">Primeiros Princípios</h3>
+                  <p className="text-sm text-gray-400">
+                    Ignore o "sempre foi feito assim". Contrate quem desconstrói problemas até a raiz.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 6. Signs You Are in Manager Mode */}
         <section className="py-24 border-t border-white/5">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto">
             <div className="max-w-3xl mx-auto text-center mb-16">
               <h2 className="text-3xl font-bold mb-6 text-white font-serif">Sinais de Alerta</h2>
               <p className="text-gray-400 text-lg">
@@ -283,10 +358,28 @@ export const SchoolFounderMode = () => {
           </div>
         </section>
 
-        {/* 5. CTA Final */}
-        <section className="py-32 relative overflow-hidden">
+        {/* 7. The Sample of One (NEW) */}
+        <section className="py-24 bg-[#050505]">
+          <div className="container mx-auto">
+            <div className="max-w-4xl mx-auto bg-gradient-to-br from-orange-900/20 to-black border border-orange-500/20 rounded-2xl p-8 md:p-12 text-center">
+              <Crown className="text-orange-400 mx-auto mb-6" size={48} />
+              <h2 className="text-3xl font-bold mb-6 text-white font-serif">A Amostra de Um</h2>
+              <p className="text-gray-300 text-lg mb-8 leading-relaxed">
+                Gestores confiam em médias e pesquisas de mercado. Fundadores confiam em sua intuição. 
+                Se você ama o produto, há uma boa chance de que outros também amem. 
+                Não deixe os dados matarem a magia.
+              </p>
+              <div className="inline-block px-6 py-3 bg-orange-500/10 rounded-lg border border-orange-500/30 text-orange-300 font-mono text-sm">
+                "Se eu tivesse perguntado às pessoas o que elas queriam, teriam dito cavalos mais rápidos." — Henry Ford
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 8. CTA Final */}
+        <section className="py-32 relative overflow-hidden border-t border-white/5">
           <div className="absolute inset-0 bg-orange-900/10" />
-          <div className="container mx-auto px-4 text-center relative z-10">
+          <div className="container mx-auto text-center relative z-10">
             <h2 className="text-4xl font-bold mb-6 text-white font-serif">
               Retome o Controle da <span className="text-orange-400">Sua Empresa</span>.
             </h2>

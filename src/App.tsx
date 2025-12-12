@@ -42,6 +42,14 @@ import { SchoolYouTubeLong } from './pages/SchoolYouTubeLong';
 import { SchoolMktInjusta } from './pages/SchoolMktInjusta';
 import { SchoolAIVertical } from './pages/SchoolAIVertical';
 import { SchoolFounderMode } from './pages/SchoolFounderMode';
+import { SchoolInfoSaaS } from './pages/SchoolInfoSaaS';
+import { SchoolBolhaIA } from './pages/SchoolBolhaIA';
+import { SchoolHypeCycle } from './pages/SchoolHypeCycle';
+import { SchoolZigZag } from './pages/SchoolZigZag';
+import { SchoolMktPersuasivo } from './pages/SchoolMktPersuasivo';
+import { SchoolOnePercent } from './pages/SchoolOnePercent';
+import { SchoolPurpleCow } from './pages/SchoolPurpleCow';
+import DashEditorial2026 from './pages/DashEditorial2026';
 import { ProposalSellMentors } from './pages/ProposalSellMentors';
 import { ProposalDCLC } from './pages/ProposalDCLC';
 import { ProposalUnita } from './pages/ProposalUnita';
@@ -96,6 +104,14 @@ function App() {
         <Route path="/school-mkt-injusta" element={<SchoolMktInjusta />} />
         <Route path="/school-mkt-ai-vertical" element={<SchoolAIVertical />} />
         <Route path="/school-mkt-founder-mode" element={<SchoolFounderMode />} />
+        <Route path="/school-mkt-info-saas" element={<SchoolInfoSaaS />} />
+        <Route path="/school-mkt-bolha-ia" element={<SchoolBolhaIA />} />
+        <Route path="/school-mkt-hype-cycle-gartner-2025" element={<SchoolHypeCycle />} />
+        <Route path="/school-mkt-zig-zag" element={<SchoolZigZag />} />
+        <Route path="/school-mkt-persuasivo" element={<SchoolMktPersuasivo />} />
+        <Route path="/school-mkt-1-porcento" element={<SchoolOnePercent />} />
+        <Route path="/school-mkt-vaca-roxa" element={<SchoolPurpleCow />} />
+        <Route path="/dash-editorial-2026" element={<DashEditorial2026 />} />
         <Route path="/proposta-sellmentors" element={<ProposalSellMentors />} />
         <Route path="/proposta-dclc" element={<ProposalDCLC />} />
         <Route path="/proposta-unita" element={<ProposalUnita />} />
